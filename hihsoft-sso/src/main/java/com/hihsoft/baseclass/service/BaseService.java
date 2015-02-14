@@ -40,6 +40,12 @@ public interface BaseService {
 	 */
 	public void saveOrUpdateVO(BaseEntity vo) throws ServiceException;
 
+	/**
+	 * 新增、修改对象
+	 *
+	 * @param hql
+	 *                : hql
+	 */
 	public void executeHQL(String hql, Object... params) throws ServiceException;
 
 	/**

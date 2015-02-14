@@ -47,6 +47,7 @@ import com.mysql.jdbc.StringUtils;
 @Service(value = "baseService")
 public class BaseServiceImpl implements BaseService {
 	protected Logger log = Logger.getLogger(this.getClass());
+	
 	@Autowired
 	protected BaseDAO baseDAO;
 
@@ -58,7 +59,6 @@ public class BaseServiceImpl implements BaseService {
 	@Override
 	public void deleteVO(final BaseEntity vo, final String id) throws ServiceException {
 		baseDAO.deleteVO(vo, id);
-
 	}
 
 	@Override
@@ -68,31 +68,26 @@ public class BaseServiceImpl implements BaseService {
 
 	@Override
 	public int getDataTotalNum(final String hql) throws ServiceException {
-
 		return baseDAO.getDataTotalNum(hql);
 	}
 
 	@Override
 	public int getDataTotalNum(final String hql, final String arg1) throws ServiceException {
-
 		return baseDAO.getDataTotalNum(hql, arg1);
 	}
 
 	@Override
 	public int getDataTotalNum(final String hql, final Object obj) throws ServiceException {
-
 		return baseDAO.getDataTotalNum(hql, obj);
 	}
 
 	@Override
 	public int getDataTotalNum(final String hql, final Object... filter) throws ServiceException {
-
 		return baseDAO.getDataTotalNum(hql, filter);
 	}
 
 	@Override
 	public int getDataTotalNum(final BaseEntity vo, final String whereClause) throws ServiceException {
-
 		return baseDAO.getDataTotalNum(vo, whereClause);
 	}
 
@@ -102,7 +97,6 @@ public class BaseServiceImpl implements BaseService {
 
 	@Override
 	public List<?> getPageDataByHQL(final String hql, final int page_size, final int pageNo, final Object... filter) throws ServiceException {
-
 		return baseDAO.getPageDataByHQL(hql, page_size, pageNo, filter);
 	}
 

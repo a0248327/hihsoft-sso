@@ -53,6 +53,7 @@ public abstract class JdbcBaseDAOImpl<T extends RowMapper<T>> extends JdbcTempla
 	@Override
 	public Integer getTotalNum(String sql, Object... params) throws DataAccessException {
 		sql = "select count(*) from (" + sql + ")";
+		// ResultSetExtractor是一个匿名类要继承的接口，通过匿名类把继承ResultSetExtractor接口的类实例化。
 		return query(sql, new ResultSetExtractor<Integer>() {
 			public Integer extractData(ResultSet rs) throws SQLException, DataAccessException {
 				if (rs.next()) {

@@ -112,6 +112,9 @@ public class Page {
 		this.realPath = realPath;
 	}
 
+	/**
+	 * 返回hql语句
+	 */
 	public String getHql() {
 		return hql;
 	}
